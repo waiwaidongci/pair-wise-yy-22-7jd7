@@ -1,4 +1,5 @@
 import type { RestorationPlan } from "../types/RestorationPlan";
+import { INITIAL_PLAN_VERSION } from "../constants/PlanVersion";
 
 export const createDefaultRestorationPlan = (overrides: Partial<RestorationPlan> = {}): RestorationPlan => ({
   id: 1 as never,
@@ -9,6 +10,9 @@ export const createDefaultRestorationPlan = (overrides: Partial<RestorationPlan>
   risk_assessment: "risk assessment 1" as never,
   approval_status: "SUBMITTED" as never,
   owner_id: 1 as never,
+  version: INITIAL_PLAN_VERSION as never,
+  submitted_version: null as never,
+  approved_version: null as never,
   ...overrides
 });
 

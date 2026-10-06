@@ -75,7 +75,10 @@ export const mockData = {
       "method": "method 1",
       "risk_assessment": "risk assessment 1",
       "approval_status": "SUBMITTED",
-      "owner_id": 1
+      "owner_id": 1,
+      "version": 2,
+      "submitted_version": 1,
+      "approved_version": null
     },
     {
       "id": 2,
@@ -85,7 +88,10 @@ export const mockData = {
       "method": "method 2",
       "risk_assessment": "risk assessment 2",
       "approval_status": "APPROVED",
-      "owner_id": 2
+      "owner_id": 2,
+      "version": 2,
+      "submitted_version": null,
+      "approved_version": 1
     },
     {
       "id": 3,
@@ -95,7 +101,10 @@ export const mockData = {
       "method": "method 3",
       "risk_assessment": "risk assessment 3",
       "approval_status": "DRAFT",
-      "owner_id": 3
+      "owner_id": 3,
+      "version": 1,
+      "submitted_version": null,
+      "approved_version": null
     }
   ],
   "restorationStep": [
@@ -107,7 +116,8 @@ export const mockData = {
       "material_used": "material used 1",
       "operator_id": 1,
       "step_status": "SUBMITTED",
-      "finished_at": "2026-06-11T09:00:00Z"
+      "finished_at": "2026-06-11T09:00:00Z",
+      "plan_version": 1
     },
     {
       "id": 2,
@@ -117,7 +127,8 @@ export const mockData = {
       "material_used": "material used 2",
       "operator_id": 2,
       "step_status": "APPROVED",
-      "finished_at": "2026-06-12T09:00:00Z"
+      "finished_at": "2026-06-12T09:00:00Z",
+      "plan_version": 1
     },
     {
       "id": 3,
@@ -127,7 +138,8 @@ export const mockData = {
       "material_used": "material used 3",
       "operator_id": 3,
       "step_status": "DRAFT",
-      "finished_at": "2026-06-13T09:00:00Z"
+      "finished_at": "2026-06-13T09:00:00Z",
+      "plan_version": 1
     }
   ],
   "imageVersion": [

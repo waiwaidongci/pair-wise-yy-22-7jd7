@@ -1,4 +1,5 @@
 import type { RestorationStep } from "../types/RestorationStep";
+import { INITIAL_PLAN_VERSION } from "../constants/PlanVersion";
 
 export const createDefaultRestorationStep = (overrides: Partial<RestorationStep> = {}): RestorationStep => ({
   id: 1 as never,
@@ -9,6 +10,7 @@ export const createDefaultRestorationStep = (overrides: Partial<RestorationStep>
   operator_id: 1 as never,
   step_status: "SUBMITTED" as never,
   finished_at: "2026-06-11T09:00:00Z" as never,
+  plan_version: INITIAL_PLAN_VERSION as never,
   ...overrides
 });
 

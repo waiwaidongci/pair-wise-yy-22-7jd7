@@ -1,3 +1,10 @@
+import type { ApprovalRecord } from "./models/ApprovalRecord";
+import type { OperationRecord } from "./models/OperationRecord";
+import type { PlanVersionSnapshot } from "./models/PlanVersionSnapshot";
+import type { RestorationPlanRow } from "./models/RestorationPlan";
+import type { RestorationStepRow } from "./models/RestorationStep";
+import type { VersionArchiveRecord } from "./models/VersionArchiveRecord";
+
 export const seed = {
   "relicItem": [
     {
@@ -67,6 +74,7 @@ export const seed = {
     }
   ],
   "restorationPlan": [
+    // 旧数据：缺少版本字段，首次读取时升级为初始版并留档
     {
       "id": 1,
       "relic_id": 1,
@@ -97,8 +105,9 @@ export const seed = {
       "approval_status": "DRAFT",
       "owner_id": 3
     }
-  ],
+  ] as RestorationPlanRow[],
   "restorationStep": [
+    // 旧数据：缺少 plan_version，读取时升级为初始版并留档
     {
       "id": 1,
       "plan_id": 1,
@@ -129,7 +138,7 @@ export const seed = {
       "step_status": "DRAFT",
       "finished_at": "2026-06-13T09:00:00Z"
     }
-  ],
+  ] as RestorationStepRow[],
   "imageVersion": [
     {
       "id": 1,
@@ -161,5 +170,9 @@ export const seed = {
       "capture_at": "2026-06-13T09:00:00Z",
       "note": "note 3"
     }
-  ]
-} as const;
+  ],
+  "planVersionSnapshot": [] as PlanVersionSnapshot[],
+  "approvalRecord": [] as ApprovalRecord[],
+  "operationRecord": [] as OperationRecord[],
+  "versionArchive": [] as VersionArchiveRecord[]
+};

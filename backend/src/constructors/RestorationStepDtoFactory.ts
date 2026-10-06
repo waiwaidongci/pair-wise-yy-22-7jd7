@@ -1,1 +1,3 @@
-export const createRestorationStepDto = (overrides = {}) => ({ id: 1, plan_id: 1, step_order: "step order 1", technique: "technique 1", material_used: "material used 1", operator_id: 1, step_status: "SUBMITTED", finished_at: "2026-06-11T09:00:00Z", ...overrides });
+import { INITIAL_PLAN_VERSION } from "../constants/PlanVersion";
+
+export const createRestorationStepDto = (overrides = {}) => ({ id: 1, plan_id: 1, step_order: "step order 1", technique: "technique 1", material_used: "material used 1", operator_id: 1, step_status: "SUBMITTED", finished_at: "2026-06-11T09:00:00Z", plan_version: INITIAL_PLAN_VERSION, ...overrides });
