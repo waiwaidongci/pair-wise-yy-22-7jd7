@@ -7,8 +7,9 @@ export const createDefaultRestorationStep = (overrides: Partial<RestorationStep>
   technique: "technique 1" as never,
   material_used: "material used 1" as never,
   operator_id: 1 as never,
-  step_status: "SUBMITTED" as never,
+  step_status: "DRAFT" as never,
   finished_at: "2026-06-11T09:00:00Z" as never,
+  version_no: 1,
   ...overrides
 });
 

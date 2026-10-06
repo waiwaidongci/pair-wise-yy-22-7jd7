@@ -7,4 +7,6 @@ export interface RestorationPlan {
   risk_assessment: string;
   approval_status: string;
   owner_id: number;
+  version_no: number;
+  frozen_version_no: number | null;
 }

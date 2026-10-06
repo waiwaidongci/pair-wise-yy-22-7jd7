@@ -7,4 +7,5 @@ export interface RestorationStep {
   operator_id: number;
   step_status: string;
   finished_at: string;
+  version_no: number;
 }

@@ -75,7 +75,9 @@ export const seed = {
       "method": "method 1",
       "risk_assessment": "risk assessment 1",
       "approval_status": "SUBMITTED",
-      "owner_id": 1
+      "owner_id": 1,
+      "version_no": 1,
+      "frozen_version_no": 1
     },
     {
       "id": 2,
@@ -85,7 +87,9 @@ export const seed = {
       "method": "method 2",
       "risk_assessment": "risk assessment 2",
       "approval_status": "APPROVED",
-      "owner_id": 2
+      "owner_id": 2,
+      "version_no": 2,
+      "frozen_version_no": null
     },
     {
       "id": 3,
@@ -107,7 +111,8 @@ export const seed = {
       "material_used": "material used 1",
       "operator_id": 1,
       "step_status": "SUBMITTED",
-      "finished_at": "2026-06-11T09:00:00Z"
+      "finished_at": "2026-06-11T09:00:00Z",
+      "version_no": 1
     },
     {
       "id": 2,
@@ -117,7 +122,8 @@ export const seed = {
       "material_used": "material used 2",
       "operator_id": 2,
       "step_status": "APPROVED",
-      "finished_at": "2026-06-12T09:00:00Z"
+      "finished_at": "2026-06-12T09:00:00Z",
+      "version_no": 1
     },
     {
       "id": 3,
@@ -161,5 +167,7 @@ export const seed = {
       "capture_at": "2026-06-13T09:00:00Z",
       "note": "note 3"
     }
-  ]
+  ],
+  "versionArchive": [],
+  "operationRecord": []
 } as const;
